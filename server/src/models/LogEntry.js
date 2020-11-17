@@ -1,4 +1,5 @@
-import mongoose from 'mongoose';
+const mongoose = require('mongoose');
+
 const { Schema } = mongoose;
 
 
@@ -7,6 +8,7 @@ const requiredNumber = {
     type: Number,
     required: true,
 };
+
 
 
 
@@ -45,6 +47,6 @@ timestamps: true,
 
 });
 
-const logEntry = mongoose.model('logEntry', logEntrySchema);
-module.exports = logEntry;
+const LogEntry = mongoose.model('LogEntry', logEntrySchema);
+module.exports = LogEntry;
 
